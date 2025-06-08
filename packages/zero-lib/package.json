@@ -1,0 +1,26 @@
+{
+  "name": "@zeroopensource/zero-lib",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/zero-lib.cjs",
+  "module": "./dist/zero-lib.js",
+  "types": "./dist/zero-lib.d.ts",
+  "bin": {
+    "zero": "./bin/cli-proxy.cjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "cpx ../../README.md ./",
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@zeroopensource/zero-cli": "latest",
+    "@zeroopensource/zero-id": "latest",
+    "@zeroopensource/zero-official": "latest"
+  },
+  "devDependencies": {}
+}
