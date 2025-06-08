@@ -1,5 +1,5 @@
 'use client'
-import { useZeroId } from '@zero-company/zero-lib'
+import { useZeroId } from './use-zero-id'
 
 /* eslint-disable react-hooks/rules-of-hooks */
 export const { generateZeroId, generateZeroIds, parseZeroId } = useZeroId({
